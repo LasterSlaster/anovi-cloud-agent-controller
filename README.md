@@ -26,7 +26,7 @@ Ledger Browser: `http://localhost:9000/`
 TODO: Setup demo with GENESIS_FILE
 
 Start Aca-Py demo with docker in the background
-`LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber --events --no-auto --bg`
+`LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io demo/run_demo faber --events --no-auto --bg`
 
 Connect terminal to docker container running in the background
 `docker logs -f faber`
