@@ -32,7 +32,9 @@ Connect terminal to docker container running in the background
 `docker logs -f faber`
 
 Admin URL (usually):  http://172.17.0.1:8021
+
 (in Linux subsystem http://172.24.86.32:8021)
+
 Open in Browser to acces Swagger Interface
 
 ## Django
