@@ -17,6 +17,24 @@ cd von-network
 
 Ledger Browser: `http://localhost:9000/`
 
+## RUN Indy Node
+`./pool_start.sh [number of nodes in pool] [IP addresses of nodes] [number of clients] [port for the first node]`
+`./pool_stop.sh [file with pool data] [pool network name]`
+
+run with docker:
+```
+Start the pool of local nodes on 127.0.0.1:9701-9708 with Docker by running:
+
+docker build -f ci/indy-pool.dockerfile -t indy_pool .
+docker run -itd -p 9701-9708:9701-9708 indy_pool
+```
+docker network:
+```
+docker network create --subnet 10.0.0.0/8 indy_pool_network
+docker build --build-arg pool_ip=10.0.0.2 -f ci/indy-pool.dockerfile -t indy_pool .
+docker run -d --ip="10.0.0.2" --net=indy_pool_network indy_pool
+```
+
 ## RUN ACA-PY
 
 `./scripts/run_docker start --inbound-transport http 0.0.0.0 8030 --outbound-transport http --admin 0.0.0.0 8040 --admin-insecure-mode --debug --log-level DEBUG`
