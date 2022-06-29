@@ -44,12 +44,15 @@ docker run -d --ip="10.0.0.2" --net=indy_pool_network indy_pool
 TODO: Setup demo with GENESIS_FILE
 
 Start Aca-Py demo with docker in the background
-`LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber --events --no-auto --bg`
+`LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io demo/run_demo faber --events --no-auto --bg`
 
 Connect terminal to docker container running in the background
 `docker logs -f faber`
 
 Admin URL (usually):  http://172.17.0.1:8021
+
+(in Linux subsystem http://172.24.86.32:8021)
+
 Open in Browser to acces Swagger Interface
 
 ## Django
