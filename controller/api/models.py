@@ -12,6 +12,6 @@ class Request(models.Model):
     def __str__(self):
         return self.request_content
 
-    def send(self):
-        self.response_content = requests.get(self.request_content)
-        self.request_date = timezone.now()
+    #def send(self):
+    #    self.response_content = requests.get(self.request_content)
+    #    self.request_date = timezone.now()
