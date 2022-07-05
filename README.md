@@ -80,15 +80,15 @@ Domain objects for database can be defined in appname/models.py.
 
 Set up necessary tables in database: `python3 manage.py migrate`
 
-Migrate changes in database: `python manage.py makemigrations appname`
+Migrate changes in database: `python3 manage.py makemigrations appname`
 
-Apply suggested changes to database: `python manage.py migrate`
+Apply suggested changes to database: `python3 manage.py migrate`
 
-Create admin user: `python manage.py createsuperuser`
+Create admin user: `python3 manage.py createsuperuser`
 
 Import models in appname/admin.py.
 
-Run server: `python manage.py runserver`
+Run server: `python3 manage.py runserver`
 
 Use admin interface to edit databse entrys, users, etc at http://127.0.0.1:8000/admin.
 
@@ -97,7 +97,7 @@ Go to http://127.0.0.1:8000/appname to see the view defined in appname/views.py.
 ### Use anovi-cloud-agent-controller
 Clone repo: `git clone https://github.com/LasterSlaster/anovi-app.git` `cd ananovi-cloud-agent-controller/controller`
 
-Run server: `python manage.py runserver`
+Run server: `python3 manage.py runserver`
 
 Configure what HTTP requests can be sent with the controller at http://127.0.0.1:8000/admin.
 
