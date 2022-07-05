@@ -60,28 +60,45 @@ Open in Browser to acces Swagger Interface
 
 ### Getting started
 Install django: `pip install django`
+
 Create new django project: `django-admin startproject projectname`
+
 Run django server: `python3 manage.py runserver` -> Open Browser and navigate to http://127.0.0.1:8000/ to send a GET request to test endpoint
 
 ### Working with Django
 Create new app inside project: `python3 manage.py startapp appname`
+
 Application code is served by files like appname/views.py.
+
 Add your app to installed apps in settings.py.
-URLs are defined in urls.py files. Root urls file is projectname/urls.py. Here you can include appname/urls.py. In appname/urls.py you can define paths reltive to root/appname/.
+
+URLs are defined in urls.py files. Root urls file is projectname/urls.py. Here you can include appname/urls.py. In appname/urls.py you can define paths relative to root/appname/.
+
 Chose your preferred database engine and configuration in settings.py.
+
 Domain objects for database can be defined in appname/models.py.
+
 Set up necessary tables in database: `python3 manage.py migrate`
+
 Migrate changes in database: `python manage.py makemigrations appname`
+
 Apply suggested changes to database: `python manage.py migrate`
+
 Create admin user: `python manage.py createsuperuser`
+
 Import models in appname/admin.py.
+
 Run server: `python manage.py runserver`
-Use admin interface to edit databse entrys, users, etc at http://127.0.0.1:8000/admin
+
+Use admin interface to edit databse entrys, users, etc at http://127.0.0.1:8000/admin.
+
 Go to http://127.0.0.1:8000/appname to see the view defined in appname/views.py.
 
 ### Use anovi-cloud-agent-controller
-Clone repo: `git clone https://github.com/LasterSlaster/anovi-app.git`
-`cd ananovi-cloud-agent-controller/controller`
+Clone repo: `git clone https://github.com/LasterSlaster/anovi-app.git` `cd ananovi-cloud-agent-controller/controller`
+
 Run server: `python manage.py runserver`
+
 Configure what HTTP requests can be sent with the controller at http://127.0.0.1:8000/admin.
+
 See List of possible requests at http://127.0.0.1:8000/api and click to send.
